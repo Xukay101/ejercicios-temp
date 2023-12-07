@@ -1,3 +1,4 @@
+from time import time
 from typing import List
 
 def number_is_happy(num: int) -> bool:
@@ -27,5 +28,12 @@ def get_happy_numbers(limit: int = 10) -> List[int]:
     return numbers
 
 if __name__ == '__main__':
-    result = get_happy_numbers(10)
+    start_time = time()
+
+    result = get_happy_numbers(100)
+
+    end_time = time()
+    elapsed_time = end_time - start_time
+
     print(f'Result: {result}')
+    print(f'Time elapsed: {elapsed_time} seconds')
